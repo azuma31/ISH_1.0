@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Display</title>
+</head>
+<body>
+
+    <script>
+    // ユーザーに名前を尋ねるメッセージボックスを表示
+    var userName = prompt("あなたの名前は何ですか？（上の名前のみ)※ひらがなで");
+
+    // iframeを作成
+    var iframe = document.createElement("iframe");
+    iframe.style.width = "100%";
+    iframe.style.height = "500px";
+
+    // ユーザーが1を入力した場合はhttps://google.co.jpを表示
+    if (userName === "たかいし") {
+        iframe.src = "https://turbowarp.org/945723793/embed";
+    }
+    // ユーザーが2を入力した場合はhttps://google.comを表示
+    else if (userName === "たかさき") {
+        iframe.src = "https://turbowarp.org/945723920/embed";
+    }
+
+    else if (userName === "こんどう") {
+        iframe.src = "https://turbowarp.org/945723968/embed";
+        }
+
+    else if (userName === "しげまつ") {
+        iframe.src = "https://turbowarp.org/945723986/embed";
+        }
+
+    else if (userName === "さとう") {
+        iframe.src = "https://turbowarp.org/945724003/embed";
+        }
+
+    // それ以外の場合は何もしないか、エラーメッセージを表示するなどの処理を追加できます
+
+    // iframeをbodyに追加
+    document.body.appendChild(iframe);
+
+    </script>
+
+</body>
+</html>
