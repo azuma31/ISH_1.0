@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISH Super</title>
+    <script>
+        function checkSuperCode() {
+            // 入力された会員コードを取得
+            var enteredCode = document.getElementById("superCode").value;
+
+            // 月ごとに変わるコード
+            var validCode = "c231";
+
+            // 入力されたコードが正しいかチェック
+            if (enteredCode === validCode) {
+                // 正しい場合はリダイレクト
+                window.location.href = "super.html";
+            } else {
+                // 間違っている場合はエラーメッセージを表示
+                alert("会員コードが正しくありません。もう一度入力してください。");
+            }
+        }
+
+        function checkPremiumCode() {
+            // 入力された会員コードを取得
+            var enteredCode = document.getElementById("premiumCode").value;
+
+            // 月ごとに変わるコード
+            var validCode = "p392";
+
+            // 入力されたコードが正しいかチェック
+            if (enteredCode === validCode) {
+                // 正しい場合はリダイレクト
+                window.location.href = "premium.html";
+            } else {
+                // 間違っている場合はエラーメッセージを表示
+                alert("会員コードが正しくありません。もう一度入力してください。");
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>ISH Super</h1>
+        <p>ISH Superを利用する場合は以下の入力ボックスにYマーケットで取得した会員コードを入力してください</p>
+        <input type="text" id="superCode" placeholder="ISH super会員コード">
+        <button onclick="checkSuperCode()">送信</button>
+    <br />
+    <h1>ISH Premium</h1>
+    <p>ISH Premiumを利用する場合は以下の入力ボックスにYマーケットで取得した会員コードを入力してください</p>
+    <input type="text" id="premiumCode" placeholder="ISH premium会員コード">
+    <button onclick="checkPremiumCode()">送信</button>
+</body>
+</html>
